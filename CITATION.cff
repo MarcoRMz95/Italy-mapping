@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this package, please cite it using the metadata below. Cite the underlying GIS sources separately."
+type: software
+title: "Italy mapping: Reproducible Relief and Administrative Maps of Italy"
+authors:
+  - family-names: "Ramirez Mauricio"
+    given-names: "Marco Aurelio"
+version: 1.0.0
+date-released: 2026-09-04
+repository-code: "https://github.com/MarcoRMz95/Italy-mapping"
+url: "https://github.com/MarcoRMz95/Italy-mapping"
+license: MIT
+keywords:
+  - R
+  - GIS
+  - Italy
+  - cartography
+  - elevation

@@ -1,0 +1,15 @@
+^Italy-mapping[.]Rproj$
+^[.]Rproj[.]user$
+^[.]git$
+^[.]github$
+^[.]gitignore$
+^data$
+^output$
+^scripts$
+^docs$
+^examples$
+^CITATION[.]cff$
+^LICENSE[.]md$
+^README[.]md$
+^italymapping_.*[.]tar[.]gz$
+^italymapping[.]Rcheck$

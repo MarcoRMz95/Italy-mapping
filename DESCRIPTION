@@ -1,0 +1,17 @@
+Package: italymapping
+Type: Package
+Title: Italy Mapping
+Version: 1.0.0
+Authors@R: person(given = c("Marco", "Aurelio"), family = "Ramirez Mauricio",
+    email = "114740853+MarcoRMz95@users.noreply.github.com", role = c("aut", "cre"))
+Description: Reproducible shaded-relief maps of Italian regions, with municipal
+    boundaries, rivers, coastlines and English annotations. Includes national GIS
+    data and four ready-to-run regional examples. Map generation is offline
+    and preserves the native information content of the supplied elevation grid.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Depends: R (>= 4.4.0)
+Imports: sf, terra, ggplot2, ragg, ggspatial, scales
+Suggests: jsonlite, curl, remotes, zip
+URL: https://github.com/MarcoRMz95/Italy-mapping
+BugReports: https://github.com/MarcoRMz95/Italy-mapping/issues
