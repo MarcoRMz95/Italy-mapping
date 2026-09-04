@@ -65,6 +65,31 @@ Ready-to-run scripts are in [`examples/`](examples/). After installation, run
 four maps at print resolution and refresh the gallery. Full outputs are written
 to `output/` and are excluded from Git; lightweight gallery images are tracked.
 
+## Add your own coordinate locations
+
+The [custom locations example](examples/05_custom_locations.R) adds four red
+points and labels to Veneto using WGS84 longitude/latitude in decimal degrees.
+These are illustrative locations, not actual monitoring stations. Replace them
+with your own coordinates in the external [CSV template](examples/custom_locations.csv).
+The script reads this file directly; `label` contains the name printed on the map.
+
+```r
+locations <- read.csv("examples/custom_locations.csv", fileEncoding = "UTF-8")
+points <- sf::st_as_sf(locations, coords = c("longitude", "latitude"), crs = 4326)
+p <- italy_example("veneto")
+p + ggplot2::geom_sf(data = points, color = "red", size = 3,
+                     inherit.aes = FALSE, show.legend = FALSE) +
+  ggplot2::geom_sf_label(data = points, ggplot2::aes(label = label),
+                         nudge_y = 4500, inherit.aes = FALSE, show.legend = FALSE) +
+  p$coordinates
+```
+
+Use longitude first and latitude second. `geom_sf()` handles the conversion to
+the map projection automatically. Points outside the map frame are clipped.
+The full script includes labels, CSV import instructions and PNG/TIFF export.
+
+![Veneto with custom locations](docs/images/veneto_custom_locations.png)
+
 ## Choose another region or area
 
 ```r
