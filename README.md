@@ -23,7 +23,7 @@ remotes::install_github("MarcoRMz95/Italy-mapping")
 library(italymapping)
 ```
 
-This repository is initially private, so your GitHub account must have access.
+This repository is public; no GitHub authentication is required.
 You can also download the source package from the repository release and install
 it locally. Install its dependencies first:
 
